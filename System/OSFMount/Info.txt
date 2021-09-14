@@ -1,0 +1,6 @@
+﻿OSFMount allows the analysis of disk images with PassMark OSForensics. OSFMount 
+can be used to mount image files that were created using a disk cloning 
+application (such as OSFClone). The image file is mounted as a virtual drive on 
+Windows, which can then be analyzed using OSForensics.
+
+OSFMount can also be used to create RAM disks and mount CD/DVD-ROMs as RAM disks.

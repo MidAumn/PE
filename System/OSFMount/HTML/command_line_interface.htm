@@ -1,0 +1,150 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head>
+   <title>Command Line Interface</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="CLI,Command Line Interface" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.html?command_line_interface.htm"; }
+  else { parent.quicksync('a2.4'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Command Line Interface</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="overview.htm"><img src="nav_up_blue.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="mount_new.htm"><img src="nav_left_blue.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="support.htm"><img src="nav_right_blue.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>The OSFMount CLI can be accessed by opening a command prompt with administrator privileges, and running the <span style="font-family: 'Courier New';">OSFMount.com</span> console application in the application directory.</p>
+<p>&nbsp;</p>
+<p><span style="font-size: 12pt; font-weight: bold;">Usage</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 'Courier New';">osfmount -a -t type -m mountpoint [-n] [-o opt1[,opt2 ...]] [-f|-F file]</span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; [-s size] [-b offset] [-v partition]</span></p>
+<p><span style="font-family: 'Courier New';">osfmount -d|-D [-m mountpoint]</span></p>
+<p><span style="font-family: 'Courier New';">osfmount -l [-m mountpoint]</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 'Courier New';">-a &nbsp; &nbsp; &nbsp;Mount a virtual disk.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 'Courier New';">-d &nbsp; &nbsp; &nbsp;Dismount a virtual disk.</span></p>
+<p><span style="font-family: 'Courier New';">-D &nbsp; &nbsp; &nbsp;Force dismount a virtual disk.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 'Courier New';">-t type</span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp;Select the backingstore for the virtual disk.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 'Courier New';">vm &nbsp; &nbsp; &nbsp;Virtual disk is backed by virtual memory (ie. RAM disk).</span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp;If -f is specified, that file is pre-loaded into the virtual memory.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 'Courier New';">file &nbsp; &nbsp;Virtual disk is backed by the file specified with -f file</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 'Courier New';">-f file or -F file</span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp;File to use as for virtual disk.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 'Courier New';">-l &nbsp; &nbsp; &nbsp;List configured devices. If given with -m, display details about</span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp;that particular device.</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-family: 'Courier New';">-s size</span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp;Size of the virtual disk. Size is number of bytes unless suffixed with</span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp;'b|k|m|g|t|K|M|G|T' which denotes number of 512-byte blocks,</span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp;thousand bytes, million bytes, billion bytes, trillion bytes,</span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp;kilobytes, megabytes, gigabytes and terabytes respectively. The suffix</span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp;can also be % to indicate percentage of free physical memory which</span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp;could be useful when creating vm type virtual disks. It is optional to</span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp;specify a size unless the file to use for a file type virtual disk does</span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp;not already exist or when a vm type virtual disk is created without</span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp;specifying an initialization image file using the -f or -F.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp;The size can be a negative value to indicate the size of free physical</span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp;memory minus this size. If you e.g. type -400M the size of the virtual</span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp;disk will be the amount of free physical memory minus 400 MB.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 'Courier New';">-b offset</span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp;Specifies an offset in an image file where the virtual disk begins.</span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp;If not specified, the offset shall be automatically calculated.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 'Courier New';">-v partition</span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp;Specifies which partition to mount when mounting a raw hard disk image</span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp;file containing a master boot record and partitions.</span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp;If not specified, the partition shall be automatically selected.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 'Courier New';">-o option</span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp;Set or reset options.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 'Courier New';">ro &nbsp; &nbsp; &nbsp;Creates a read-only virtual disk.</span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp;This is enabled by default if -f is specified.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 'Courier New';">rw &nbsp; &nbsp; &nbsp;Specifies that the virtual disk should be read/writable.</span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp;This is enabled by default if vm type virtual disk is created.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 'Courier New';">rem &nbsp; &nbsp; Specifies that the device should be created with removable media</span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp;characteristics. This changes the caching behaviour of the virtual disk</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 'Courier New';">fix &nbsp; &nbsp; Specifies that the media characteristics of the virtual disk should be</span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp;fixed media. This option is selected by default.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 'Courier New';">-m mountpoint</span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp;Specifies a drive letter (eg. "F:") to perform the operation on.</span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp;When creating a new virtual disk you can specify #: as mountpoint</span></p>
+<p><span style="font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp;in which case the first unused drive letter is automatically used.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 12pt; font-weight: bold;">Examples</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-style: italic; font-weight: bold;">Mounting an image file as a virtual drive</span></p>
+<p>&nbsp;</p>
+<p style="text-indent: 24px;"><span style="font-family: 'Courier New'; font-weight: bold;">osfmount -a -t file -f C:\passmark\images\vmdk_split.001 -m #:</span></p>
+<p style="text-indent: 24px;">&nbsp;</p>
+<p style="text-indent: 24px;"><span style="font-size: 8pt; font-family: 'Courier New';">Creating device...</span></p>
+<p style="text-indent: 24px;"><span style="font-size: 8pt; font-family: 'Courier New';">Created device 0: G: -&gt; C:\passmark\images\vmdk_split.001</span></p>
+<p style="text-indent: 24px;"><span style="font-size: 8pt; font-family: 'Courier New';">Notifying applications...</span></p>
+<p style="text-indent: 24px;"><span style="font-size: 8pt; font-family: 'Courier New';">Done.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-style: italic; font-weight: bold;">Dismounting a virtual drive</span></p>
+<p>&nbsp;</p>
+<p style="text-indent: 23px;"><span style="font-family: 'Courier New'; font-weight: bold;">osfmount -d -m g:</span></p>
+<p style="text-indent: 23px;">&nbsp;</p>
+<p style="text-indent: 23px;"><span style="font-size: 8pt; font-family: 'Courier New';">Flushing file buffers...</span></p>
+<p style="text-indent: 23px;"><span style="font-size: 8pt; font-family: 'Courier New';">Locking volume...</span></p>
+<p style="text-indent: 23px;"><span style="font-size: 8pt; font-family: 'Courier New';">Dismounting filesystem...</span></p>
+<p style="text-indent: 23px;"><span style="font-size: 8pt; font-family: 'Courier New';">Removing device...</span></p>
+<p style="text-indent: 23px;"><span style="font-size: 8pt; font-family: 'Courier New';">Removing mountpoint...</span></p>
+<p style="text-indent: 23px;"><span style="font-size: 8pt; font-family: 'Courier New';">Done.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-style: italic; font-weight: bold;">Displaying virtual drive details</span></p>
+<p>&nbsp;</p>
+<p style="text-indent: 24px;"><span style="font-family: 'Courier New'; font-weight: bold;">osfmount -l -m g:</span></p>
+<p style="text-indent: 24px;">&nbsp;</p>
+<p style="text-indent: 24px;"><span style="font-size: 8pt; font-family: 'Courier New';">G: = \??\C:\passmark\images\vmdk_split.001</span></p>
+<p style="text-indent: 24px;"><span style="font-size: 8pt; font-family: 'Courier New';">Size: 42939588608 bytes (39.99 GB), ReadOnly, File Type Virtual Disk, HDD.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>
