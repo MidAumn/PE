@@ -1,7 +1,0 @@
-﻿Recuva is a supremely user-friendly file recovery tool.
-
-Deleting files by accident is something that happens more often than you think, no matter how computer literate you are. This is why it's always a good idea to have a tool like Recuva. With Recuva (pronounced as "recover") you can restore files that have been accidentally deleted from the computer, a USB drive, an MP3 player or even a memory card from your photo camera.
-
-A very handy recovery wizard takes all the guesswork out of finding your files. All you have to do is select they type of file you want to recover (photos, emails, videos, etc.) and where it's likely to be (recycle bin, on a media card, etc.). As soon as Recuva's finished, you'll see a list with all the recoverable files, which you can sort in several ways or search with a customizable filter tool. Then simply select the files you want to recover and you're ready to go.
-
-Obviously Recuva is just a software tool and can't perform miracles. The sooner you use the program after deleting files, the more chance you have of recovering them. Also, try saving them to a different drive: it improves the success percentage.

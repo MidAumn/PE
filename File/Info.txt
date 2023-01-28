@@ -1,7 +1,0 @@
-﻿<pre>7Zip
-SumatraPDF
-Everything
-Q-Dir
-Imagine
-Recuva
-</pre>
